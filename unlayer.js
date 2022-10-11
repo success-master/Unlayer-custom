@@ -1,8 +1,7 @@
-var divsToHide = Array.from(
-  (document.getElementsByClassName("u_row") as HTMLCollectionOf<HTMLElement>)
-);
-console.log("divsToHide: ", divsToHide);
-for (var i = 0; i < divsToHide.length; i++) {
-
-    divsToHide[i].style.backgroundColor = "red";
-}
+let container = document.getElementsByClassName("u_row");
+let containerArray = Array.prototype.slice.call(container);
+console.log("container: ", containerArray);
+containerArray.forEach(element => {
+    console.log("elm: ", element);
+    element.style.backgroundColor = 'red';
+});
